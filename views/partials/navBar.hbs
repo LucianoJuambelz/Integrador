@@ -1,0 +1,34 @@
+<div class="nav__Bar">
+            <ul class="nav__ul">
+                <li class=" button home"><a class="switch__link" href="/">Home</a></li>
+
+                {{#if user }}
+            
+                <li class=" button"><a class="switch__link" href="/users/Out">Logout</a></li>
+                
+                <li class="button"><a class="switch__link" href="/private">Private</a></li>
+                
+                <li class="logout config">
+                    <div class="dropdown">
+                        <button class=" button">Config</button>
+                            <div class="dropdown-content">
+                                <a class="anchor__dropdown switch__link" href="/users/settings">Settings</a>
+                
+                                <a class="anchor__dropdown switch__link" href="/users/validate">Validate Email</a>
+                            </div>
+                    </div>
+                </li>
+
+                {{else}}
+
+                <li class="switch__button button registro"><a class="switch__link" href="/users/register">Register</a></li>
+
+                <li class="switch__button button login"><a class="switch__link" href="/users/login">Login</a></li>
+
+                {{/if}}  
+                      
+                <li class="switch__button button contacto"><a class="switch__link" href="/users/contacto">Contacto</a><li>  
+                
+            </ul>
+            
+</div>

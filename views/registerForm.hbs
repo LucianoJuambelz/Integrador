@@ -1,0 +1,45 @@
+<h1 class="title__home">Registro del Usuario</h1>
+        {{>navBar}}
+<main class="register__main">
+    <div class="main">
+        <form class="form" id="a-form" action="/users/register" method="POST">
+
+            <h2 class="form_title title"> Create Account </h2>
+            
+            <div class="form__icons"></div>
+            
+            <span class="form__span">
+                or use email for registration
+            </span>
+            
+            <input class="form__input" type="text" name="name" placeholder="Nombre" value="{{ formDataReg.nombre }}" autofocus>
+
+            <input class="form__input" type="text" name="lastName" placeholder="Apellido" value="{{ formDataReg.apellido }}">
+            
+            <input class="form__input" type="text" name="email" placeholder="Email" value="{{ formDataReg.email }}">
+            
+            <input class="form__input" type="password" name="pass" placeholder="Password">
+
+            <input class="form__button button" type="submit" value="Enviar">
+               {{message}}
+                {{#each arrRegWarming}}
+            
+                    <p class="parrafo-rojo">{{msg}}</p>
+
+                {{/each}}
+        </form>
+            
+        <div class="login__container">
+            <h2 class="switch__title title">
+                Welcome Back!
+            </h2>
+            <p class="switch__description description">
+                To keep connected with us please login with your personal info
+            </p>
+            <button class="switch__button button switch-btn">
+                <a class="switch__link" href="/users/login">Iniciar Sesion</a>
+            </button>
+        </div>
+    </div>
+
+</main>

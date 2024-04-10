@@ -1,0 +1,45 @@
+{{>navBar}}
+<main class="maing__login">
+    <div class="main">
+     
+        <form action="/users/setting" method="POST" class="form">
+            <h2 class="form_title title">Editar Informacion</h2>
+               <p>{{message}}</p>
+       
+            <input type="text" name="name" class="form__input"  value="{{user.name}}">
+        
+            <input type="text" name="lastName" class="form__input"  value="{{user.lastName}}">
+
+            <input type="text" name="email" class="form__input" value="{{user.email}}">
+        
+            <input type="submit" class="form__button button" value="Enviar">
+        
+        </form>
+        <div class="login__container" id="switch-c1">
+            <div class="img__container"><img class="img__contacto" src="/images/settings.svg" alt="Settings" class="imgSet"></div>
+        </div>
+        <div class="delete__btn">
+            <button class="form__button button">
+                <a class="switch__link" href="#modal">Borrar cuenta</a>
+            </button>
+
+            <section id="modal" class="modal">
+                <div class="modal__container">
+                    <figure class="modal__picture">
+                        <img src="/images/notify.svg" alt="atencion" class="modal__img">
+                    </figure>
+                    <h2 class="modal__title">
+                        ¿Estas Seguro?
+                        <span class="modal__title modal__title--bold"></span>
+                    </h2>
+                    <p class="modal__parragraph">¡Deseas borrar tus datos de usuario de forma permanente?</p>
+    
+                    <a href="/users/delete" class="modal__close aceptar">Aceptar</a>
+                    <a href="#header" class="modal__close cancelar">Cancelar</a>
+                </div>
+            </section>
+
+        </div>   
+        
+    </div>
+</main>

@@ -1,0 +1,33 @@
+<h1 class="title__home">Contacto </h1>
+{{>navBar}}
+<main class="main__login"> 
+    <div class="main">
+        
+            <div class="img">
+                <img src="/images/cosas-que-decir.svg" alt="" class="img__contacto">
+            </div>
+    
+    <form action="/users/contacto" method="post" class="form">
+        <h2 class="form_title title">Te Leemos</h2>
+       
+        <input type="text" name="name" class="form__input" placeholder="Nombre..." value="{{ formDataContact.nombre }}">
+        
+        <input type="text" name="lastName" class="form__input" placeholder="Apellido..." value="{{ formDataContact.apellido}}">
+        
+        <input type="text" name="email" class="form__input" placeholder="Email..." value="{{ formDataContact.email }}">
+        
+        <input type="text" name="motivo" class="form__input" placeholder="Motivo..." value="{{ formDataContact.motivo}}">
+        
+        <textarea class="form__input" name="message" id="" placeholder="Escriba su mensaje" cols="30" rows="10">{{ formDataContact.mensaje}}</textarea>
+
+        <input type="submit" class="form__button button" value="Enviar">
+        
+        {{#each arrContactWarming}}
+             <p class="parrafo-rojo"> {{ msg }} </p>
+        {{/each}}
+    </form>
+        
+    </div>
+
+</div>
+</main>

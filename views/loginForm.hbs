@@ -1,0 +1,46 @@
+<h1 class="title__home">Iniciar Sesion</h1>
+{{>navBar}}
+<main class="main__login">
+           
+<div class="main">
+{{!-- <div class="container b-container" id="b-container"> --}}
+        <form class="form" id="b-form" action="/users/login" method="POST">
+                <h2 class="form_titte title">
+                    Sign in to Website
+                </h2>
+            <div class="form__icons"></div>
+
+            <span class="form__span">Or use your email account</span>
+
+            <input class="form__input" type="text" placeholder="Email" name="email" value="{{ formDataLog.email }}" autofocus>
+
+            <input class="form__input" name="pass" type="password" placeholder="Password">
+
+            <a class="form__link">Forgot your password?</a>
+
+            <input type="submit" class="form__button button" value="Enviar">
+            {{message}}
+            {{#each arrLogWarming}}
+            <p class="parrafo-rojo">{{msg}}</p>
+            {{/each}}
+        </form>
+    {{!-- </div> --}}
+<div class="login__anexo">
+    <div class="switch__circle switch__circle"></div>
+        <div class="login__container" id="switch-c2">
+                <h2 class="switch__title title">
+                    Hello Friend!
+                </h2>
+                <p class="switch__description description">
+                Enter your personal details and start journey   with us
+                </p>
+                <button class="switch__button button switch-btn">
+                    <a class="switch__link" href="/users/register">Registrarse</a>
+                </button>
+        </div>
+
+    </div>
+{{!-- </div> --}}
+</div>
+
+</main>
